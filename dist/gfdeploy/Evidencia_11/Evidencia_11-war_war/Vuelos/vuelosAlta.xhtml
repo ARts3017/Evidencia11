@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        Hello from Facelets
+        <f:view>
+
+
+            <h:form>
+                <h1><h:outputText value="Create/Edit"/></h1>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="Id:" for="id" />
+                    <h:inputText id="id" value="#{controlerVuelos.vuelos.id}" title="Id" />
+                    <h:outputLabel value="Numero_vuelo:" for="numero_vuelo" />
+                    <h:inputText id="numero_vuelo" value="#{controlerVuelos.vuelos.numero_vuelo}" title="Numero_vuelo" required="true" requiredMessage="The Numero_vuelo field is required."/>
+                    <h:outputLabel value="Numero_avion:" for="numero_avion" />
+                    <h:inputText id="numero_avion" value="#{controlerVuelos.vuelos.numero_avion}" title="Numero_avion" />
+                    <h:outputLabel value="Origen:" for="origen" />
+                    <h:selectOneMenu id="origen" value="#{controlerVuelos.vuelos.origen}" title="Origen" required="true" requiredMessage="The Origen field is required.">
+                        <!-- TODO: update below reference to list of available items-->
+                        <f:selectItems value="#{fixme}"/>
+                    </h:selectOneMenu>
+                    <h:outputLabel value="Destino:" for="destino" />
+                    <h:selectOneMenu id="destino" value="#{controlerVuelos.vuelos.destino}" title="Destino" required="true" requiredMessage="The Destino field is required.">
+                        <!-- TODO: update below reference to list of available items-->
+                        <f:selectItems value="#{fixme}"/>
+                    </h:selectOneMenu>
+                    <h:outputLabel value="Numero_pasajeros:" for="numero_pasajeros" />
+                    <h:inputText id="numero_pasajeros" value="#{controlerVuelos.vuelos.numero_pasajeros}" title="Numero_pasajeros" />
+                    <h:outputLabel value="Fecha_inicio:" for="fecha_inicio" />
+                    <h:inputText id="fecha_inicio" value="#{controlerVuelos.vuelos.fecha_inicio}" title="Fecha_inicio" >
+                        <f:convertDateTime pattern="MM/dd/yyyy" />
+                    </h:inputText>
+                    <h:outputLabel value="Fecha_fin:" for="fecha_fin" />
+                    <h:inputText id="fecha_fin" value="#{controlerVuelos.vuelos.fecha_fin}" title="Fecha_fin" >
+                        <f:convertDateTime pattern="MM/dd/yyyy" />
+                    </h:inputText>
+                    <h:outputLabel value="Hora_inicio:" for="hora_inicio" />
+                    <h:inputText id="hora_inicio" value="#{controlerVuelos.vuelos.hora_inicio}" title="Hora_inicio" >
+                        <f:convertDateTime pattern="HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="Hora_fin:" for="hora_fin" />
+                    <h:inputText id="hora_fin" value="#{controlerVuelos.vuelos.hora_fin}" title="Hora_fin" >
+                        <f:convertDateTime pattern="HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="Avion:" for="avion" />
+                    <h:selectOneMenu id="avion" value="#{controlerVuelos.vuelos.avion}" title="Avion" required="true" requiredMessage="The Avion field is required.">
+                        <!-- TODO: update below reference to list of available items-->
+                        <f:selectItems value="#{fixme}"/>
+                    </h:selectOneMenu>
+                </h:panelGrid>
+            </h:form>
+        </f:view>
+
+    </h:body>
+</html>
+

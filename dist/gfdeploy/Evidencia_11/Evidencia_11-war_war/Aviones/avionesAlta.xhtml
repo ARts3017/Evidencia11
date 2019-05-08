@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <f:view>
+
+
+            <h:form>
+                <h1><h:outputText value="Create/Edit"/></h1>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="Id:" for="id" />
+                    <h:inputText id="id" value="#{avionesController.aviones.id}" title="Id" />
+                    <h:outputLabel value="Numero_avion:" for="numero_avion" />
+                    <h:inputText id="numero_avion" value="#{avionesController.aviones.numero_avion}" title="Numero_avion" required="true" requiredMessage="The Numero_avion field is required."/>
+                    <h:outputLabel value="Capacidad_pasajeros:" for="capacidad_pasajeros" />
+                    <h:inputText id="capacidad_pasajeros" value="#{avionesController.aviones.capacidad_pasajeros}" title="Capacidad_pasajeros" required="true" requiredMessage="The Capacidad_pasajeros field is required."/>
+                    <h:outputLabel value="Modelo:" for="modelo" />
+                    <h:inputText id="modelo" value="#{avionesController.aviones.modelo}" title="Modelo" required="true" requiredMessage="The Modelo field is required."/>
+                    <h:outputLabel value="Aerolinea:" for="aerolinea" />
+                    <h:inputText id="aerolinea" value="#{avionesController.aviones.aerolinea}" title="Aerolinea" />
+                </h:panelGrid>
+            </h:form>
+        </f:view>
+
+    </h:body>
+</html>
+
